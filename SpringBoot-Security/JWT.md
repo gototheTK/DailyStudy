@@ -59,4 +59,9 @@
     인터넷 통신의 기술 및 절차 규칙에 대한 문서
     - http : RFC 2616
     - JWT : RFC 7519
-    
+
+
+## JWT(JSON WEB TOKEN) 의 구조(Base64Url로 인코딩)
+    - Header : {"alg"="HS256", "type"="JWT"}암호화 알고리즘
+    - Payload : {"sub":"123456789", "name":"John Doe", "admin":true}등록된 클레임, 공개 소유권 주장, 개인클레임
+    - Signature : Header + Payload + Secret(HMAC SHA256 or RSA)
